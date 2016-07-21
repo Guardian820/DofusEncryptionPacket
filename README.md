@@ -14,7 +14,7 @@ String value = encryp.prepareData("Bonjour");
 ```
 
 Pour déchiffrer une donnée il faut utiliser la méthode **unprepareData**
-Cette méthode prend un paramètre, la chaîne à d"chiffrer.
+Cette méthode prend un paramètre, la chaîne à déchiffrer.
 ```java
 String value = encryp.unprepareData("8F1306071023021C");
 ```
