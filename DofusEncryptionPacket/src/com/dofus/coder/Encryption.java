@@ -1,7 +1,7 @@
 package com.dofus.coder;
 
 /**
- * Permet de crypter et décrypter les packets dofus envoyés avec le packet AKXYY
+ * Permet de crypter et dÃ©crypter les packets dofus envoyÃ©s avec le packet AKXYY
  * X = une valeur entre 0-9 ou A-F
  * YY = la valeur X en hexadecimal
  * @author Manghao
@@ -14,7 +14,8 @@ public class Encryption {
 	private String HEX_CHARS[] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"};
 	
 	public Encryption(String packet) {
-		this.onKey(packet.substring(2));
+		if (packet.substring(0, 2).compareTo("AK") == 0) this.onKey(packet.substring(2));
+		if (packet.substring(0, 2).compareTo("AT") == 0) this.onKey(packet.substring(3));
 	}
 	
 	private void onKey(String sExtraData) { 
