@@ -18,6 +18,11 @@ public class Encryption {
 		if (packet.substring(0, 2).compareTo("AT") == 0) this.onKey(packet.substring(3));
 	}
 	
+	public void setKey(String packet) {
+		if (packet.substring(0, 2).compareTo("AK") == 0) this.onKey(packet.substring(2));
+		if (packet.substring(0, 2).compareTo("AT") == 0) this.onKey(packet.substring(3));
+	}
+	
 	private void onKey(String sExtraData) { 
 		int _loc3 = Integer.parseInt(sExtraData.substring(0, 1), 16);
 		String _loc4 = sExtraData.substring(1);
@@ -39,7 +44,7 @@ public class Encryption {
 	private String prepareKey(String d) {
 		String _loc3 = new String();
 		for (int _loc4 = 0; _loc4 < d.length(); _loc4 = _loc4 + 2) {
-			_loc3 = _loc3 + (char)Integer.parseInt(d.substring(_loc4, _loc4 + 2), 16);
+			_loc3 = _loc3 + (char)Integer.parseInt(d.substring(_loc4, (d.length() % 2 == 0) ? _loc4 + 2 : _loc4 + 1), 16);
 		}
 		return _loc3;
 	}
