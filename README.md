@@ -7,6 +7,7 @@ Permet de chiffrer / déchiffrer les packets de Dofus 1.29.1, lorsque ceux-ci so
 ## Auteur
 Manghao
 
+## Utilisation
 Pour instancier la classe Encryption il vous suffit de faire comme ceci:
 ```java
 String packet = "AK8697A4C776E755169";
