@@ -1,6 +1,12 @@
 # DofusEncryptionPacket
 Permet de chiffrer / déchiffrer les packets de Dofus 1.29.1, lorsque ceux-ci sont envoyés a l'aide du packet AK ou ATK
 
+## Version
+1.0.0 - Chiffrer et déchiffrer les packets
+
+## Auteur
+Manghao
+
 Pour instancier la classe Encryption il vous suffit de faire comme ceci:
 ```java
 String packet = "AK8697A4C776E755169";
